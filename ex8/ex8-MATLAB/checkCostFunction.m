@@ -35,7 +35,8 @@ numgrad = computeNumericalGradient( ...
 
 [cost, grad] = cofiCostFunc([X(:); Theta(:)],  Y, R, num_users, ...
                           num_movies, num_features, lambda);
-
+size(numgrad)
+size(grad)
 disp([numgrad grad]);
 fprintf(['The above two columns you get should be very similar.\n' ...
          '(Left-Your Numerical Gradient, Right-Analytical Gradient)\n\n']);
